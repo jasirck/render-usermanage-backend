@@ -29,4 +29,3 @@ EXPOSE 8000
 
 # Run the Gunicorn server
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "rest_api.wsgi:application"]
-    
