@@ -94,14 +94,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'rest_api.wsgi.application'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'usermanage',  # Name of your database
+        'USER': 'jasir',       # Your PostgreSQL username
+        'PASSWORD': 'rRyGLs7IqlFiPQX3TooyWiw2ZzwoCepA',  # Your PostgreSQL password
+        'HOST': 'dpg-cqjm14aj1k6c739uv4p0-a.singapore-postgres.render.com',  # Your database host
+        'PORT': '5432',  # Your database port
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgresql://jasir:rRyGLs7IqlFiPQX3TooyWiw2ZzwoCepA@dpg-cqjm14aj1k6c739uv4p0-a/usermanage")
+
+# DATABASES["default"] = dj_database_url.parse("postgresql://jasir:rRyGLs7IqlFiPQX3TooyWiw2ZzwoCepA@dpg-cqjm14aj1k6c739uv4p0-a/usermanage")
 
 AUTH_PASSWORD_VALIDATORS = [
     {
